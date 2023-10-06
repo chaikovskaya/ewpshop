@@ -1,0 +1,744 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Не переносить на продакшен -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Главная. Ewpshop</title>
+
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./libs/Selectric/public/selectric.css" />
+    <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <div class="header-top-container container">
+                    <div class="header-top-left">
+                        <ul class="header-top-links">
+                            <li class="header-top-links-item">
+                                <a class="header-location js-popup-city" href="javascript:;" data-src="./ajax/city.html">
+                                    <svg class="header-location-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.4133 5.65992C3.72664 -0.113413 12.28 -0.106746 13.5866 5.66659C14.3533 9.05325 12.2466 11.9199 10.4 13.6933C9.05997 14.9866 6.93997 14.9866 5.5933 13.6933C3.7533 11.9199 1.64664 9.04659 2.4133 5.65992Z" stroke="#53B50A" stroke-width="1.5"/>
+                                        <path d="M6.16675 7.66667L7.16675 8.66667L9.83341 6" stroke="#53B50A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg><span class="header-location-label">Ваш город: Кременчуг-Константиновское</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header-top-right">
+                        <ul class="header-top-menu">
+                            <li class="header-top-menu-item">
+                                <a class="header-top-menu-link" href="#">Оплата</a>
+                            </li>
+                            <li class="header-top-menu-item">
+                                <a class="header-top-menu-link" href="#">Салоны</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main">
+                <div class="header-main-container container">
+                    <!--
+                    <div class="mob-menu JS-MobileMenu" data-mobilemenu="{
+                        'classActive': 'open',
+                        'classShow': 'mob-menu-show',
+                        'classElementActive': 'mob-menu_active',
+                        'backgroundDisabled': 'true'
+                    }">
+                        <a class="mob-menu-switcher js-catalog-link JS-MobileMenu-Burger" href="javascript:;">
+                            <svg class="mob-menu-switcher-icon" width="23" height="17" viewBox="0 0 23 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.375 0.833252H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 8.125H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1.375 15.4165H21.7917" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <div class="mob-block JS-MobileMenu-Dropdown">
+                            <div class="mob-close-panel">
+                                <a href="/" class="header-logo">
+                                    <img class="header-logo-img" src="./images/company-logo.svg" alt="" />
+                                </a>
+                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                    <svg class="mob-menu-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="mob-nav">
+                                <ul class="mob-list">
+                                    <li class="mob-list-item">
+                                        <div class="JS-MobileMenu" data-mobilemenu="{
+                                            'classActive': 'open',
+                                            'classShow': 'mob-menu-show',
+                                            'classElementActive': 'mob-menu_active',
+                                            'backgroundDisabled': 'true'
+                                        }">
+                                            <a class="mob-list-link JS-MobileMenu-Burger js-catalog-link" href="javascript:;">
+                                                Каталог<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="#1B1B1B"/>
+                                            </svg>
+                                            </a>
+                                            <div class="mob-block JS-MobileMenu-Dropdown">
+                                                <div class="mob-back mob-back_simple">
+                                                    <a href="/" class="header-logo">
+                                                        <img class="header-logo-img" src="./images/company-logo.svg" alt="" />
+                                                    </a>
+                                                    <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                        <svg class="mob-menu-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <a class="mob-list-current mob-list-current_simple" href="#">Каталог</a>
+                                                <ul class="mob-list mob-list-child">
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-1.jpg" alt="" />
+                                                            Ортопедические изделия
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-2.jpg" alt="" />
+                                                            Ортопедическая и комфортная обувь
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-9.jpg" alt="" />
+                                                            Средства реабилитации
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-5.jpg" alt="" />
+                                                            Ортопедические подушки и матрасы
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-3.jpg" alt="" />
+                                                            Компрессионный трикотаж
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-10.jpg" alt="" />
+                                                            Изделия для спорта
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-1.jpg" alt="" />
+                                                            Ортопедическая и комфортная обувь
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-9.jpg" alt="" />
+                                                            Средства реабилитации
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-5.jpg" alt="" />
+                                                            Ортопедические подушки и матрасы
+                                                        </a>
+                                                    </li>
+                                                    <li class="mob-list-item">
+                                                        <a class="mob-list-link" href="#">
+                                                            <img class="mob-list-img" src="./images/catalog-category/catalog-category-img-3.jpg" alt="" />
+                                                            Компрессионный трикотаж
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="javascript:;">
+                                            О компании<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="#1B1B1B"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <svg class="mob-menu-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">О компании</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Салоны с приемом</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Покупки онлайн</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Салоны с приемом</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Покупки онлайн</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="#">
+                                            Клиентам<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="#1B1B1B"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <svg class="mob-menu-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">Клиентам</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Доставка</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Оплата</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Онлайн-оплата</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Бренды</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Возврат товара</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Консультация</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link JS-MobileMenu-Parent" href="javascript:;">
+                                            Услуги<svg class="mob-list-icon" width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.50785 4.5L0.00066328 8.17439L0.778723 9L5.01953 4.5L0.778723 0L0.00066328 0.825614L2.91316 3.91612L3.50785 4.5Z" fill="#1B1B1B"/>
+                                        </svg>
+                                        </a>
+                                        <div class="mob-child JS-MobileMenu-Child">
+                                            <div class="mob-back">
+                                                <a class="mob-back-link JS-MobileMenu-Back" href="javascript:;">
+                                                    <svg class="mob-back-icon" width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.834 4.35C13.193 4.35 13.484 4.64101 13.484 5C13.484 5.35899 13.193 5.65 12.834 5.65V4.35ZM0.846271 5.45962C0.59243 5.20578 0.59243 4.79422 0.846271 4.54038L4.98285 0.403806C5.23669 0.149965 5.64824 0.149965 5.90208 0.403806C6.15592 0.657647 6.15592 1.0692 5.90208 1.32304L2.22513 5L5.90208 8.67696C6.15592 8.9308 6.15592 9.34235 5.90208 9.59619C5.64824 9.85003 5.23669 9.85003 4.98285 9.59619L0.846271 5.45962ZM12.834 5.65L1.30589 5.65V4.35L12.834 4.35V5.65Z" fill="#000000"/>
+                                                    </svg>Назад
+                                                </a>
+                                                <a class="mob-menu-switcher-close JS-MobileMenu-Close" href="javascript:;">
+                                                    <svg class="mob-menu-close-icon" width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M1.75 1.25L12.4313 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        <path d="M12.4316 1.25L1.75029 11.7813" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <a class="mob-list-current" href="#">Услуги</a>
+                                            <ul class="mob-list mob-list-child">
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Врач-ортопед</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Выезд врача ортопеда</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Экспресс-доставка</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Гид по стелькам</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Изготовление стелек</a>
+                                                </li>
+                                                <li class="mob-list-item">
+                                                    <a class="mob-list-link" href="#">Партнеры АВИОНИКИ</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Гарантии</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Новости</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Отзывы</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Салоны</a>
+                                    </li>
+                                    <li class="mob-list-item">
+                                        <a class="mob-list-link" href="#">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mob-info">
+                                <a class="mob-location js-popup-city" href="javascript:;" data-src="./ajax/city.html">
+                                    <svg class="mob-location-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="20" height="20" fill="white"/>
+                                        <path d="M10.0004 11.1917C11.4363 11.1917 12.6004 10.0276 12.6004 8.5917C12.6004 7.15576 11.4363 5.9917 10.0004 5.9917C8.56445 5.9917 7.40039 7.15576 7.40039 8.5917C7.40039 10.0276 8.56445 11.1917 10.0004 11.1917Z" fill="white"/>
+                                        <path d="M3.01675 7.07508C4.65842 -0.141584 15.3501 -0.13325 16.9834 7.08342C17.9418 11.3168 15.3084 14.9001 13.0001 17.1168C10 19.9977 10.6667 20.6585 6.99175 17.1168C4.69175 14.9001 2.05842 11.3084 3.01675 7.07508Z" fill="#009B97"/>
+                                        <circle cx="10" cy="8.3335" r="2.5" fill="white"/>
+                                    </svg><span class="mob-location-label">Пенза</span>
+                                </a>
+                            </div>
+                            <div class="mob-info">
+                                <div class="mob-info-name">Телефон для связи:</div>
+                                <div class="mob-phone">
+                                    <a href="tel:+78007077258">8 800 707 72 58</a>
+                                </div>
+                            </div>
+                            <div class="mob-info">
+                                <div class="mob-info-name">Написать в мессенджер</div>
+                                <ul class="socials socials_simple">
+                                    <li class="socials-item">
+                                        <a class="socials-link" href="#">
+                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.00001 0C13.9707 0 18 4.0293 18 8.99999C18 13.9707 13.9707 18 9.00001 18C7.40951 18.0026 5.847 17.5816 4.47301 16.7805L0.00361266 18L1.22041 13.5288C0.418596 12.1544 -0.00264454 10.5912 1.24922e-05 8.99999C1.24922e-05 4.0293 4.02931 0 9.00001 0ZM5.93281 4.77L5.75281 4.7772C5.63628 4.78429 5.52239 4.81491 5.41801 4.8672C5.32038 4.92248 5.23126 4.9916 5.15341 5.0724C5.04541 5.1741 4.98421 5.2623 4.91851 5.3478C4.58562 5.78061 4.40638 6.31198 4.40911 6.858C4.41091 7.299 4.52611 7.72829 4.70611 8.12969C5.07421 8.94149 5.67991 9.80099 6.47911 10.5975C6.67171 10.7892 6.86071 10.9818 7.06411 11.1609C8.05716 12.0352 9.24053 12.6657 10.5201 13.0023L11.0313 13.0806C11.1978 13.0896 11.3643 13.077 11.5317 13.0689C11.7938 13.0554 12.0498 12.9844 12.2814 12.861C12.3993 12.8003 12.5143 12.7342 12.6261 12.663C12.6261 12.663 12.6648 12.6378 12.7386 12.582C12.8601 12.492 12.9348 12.4281 13.0356 12.3228C13.1103 12.2454 13.1751 12.1545 13.2246 12.051C13.2948 11.9043 13.365 11.6244 13.3938 11.3913C13.4154 11.2131 13.4091 11.1159 13.4064 11.0556C13.4028 10.9593 13.3227 10.8594 13.2354 10.8171L12.7116 10.5822C12.7116 10.5822 11.9286 10.2411 11.4498 10.0233C11.3997 10.0014 11.346 9.98891 11.2914 9.98639C11.2298 9.98007 11.1676 9.987 11.1089 10.0067C11.0503 10.0264 10.9965 10.0585 10.9512 10.1007C10.9467 10.0989 10.8864 10.1502 10.2357 10.9386C10.1984 10.9888 10.1469 11.0267 10.0879 11.0475C10.0289 11.0684 9.96509 11.0712 9.90451 11.0556C9.84588 11.0399 9.78843 11.02 9.7326 10.9962C9.62101 10.9494 9.58231 10.9314 9.50581 10.899C8.98927 10.6736 8.51103 10.369 8.08831 9.99629C7.97491 9.89729 7.86961 9.78929 7.76161 9.68489C7.40754 9.3458 7.09896 8.9622 6.84361 8.54369L6.79051 8.45819C6.75237 8.40074 6.72153 8.33877 6.69871 8.27369C6.66451 8.14139 6.75361 8.03519 6.75361 8.03519C6.75361 8.03519 6.97231 7.79579 7.07401 7.66619C7.17301 7.54019 7.25671 7.4178 7.31071 7.3305C7.41691 7.1595 7.45021 6.984 7.39441 6.8481C7.14241 6.2325 6.88141 5.6196 6.61321 5.0112C6.56011 4.8906 6.40261 4.8042 6.25951 4.7871C6.21091 4.7817 6.16231 4.7763 6.11371 4.7727C5.99284 4.76669 5.87173 4.76789 5.75101 4.7763L5.93191 4.7691L5.93281 4.77Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-item">
+                                        <a class="socials-link" href="#">
+                                            <svg width="23" height="13" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22.4791 0.825192C22.2385 1.49906 21.8865 2.13838 21.4343 2.72281L21.4526 2.6976C21.0232 3.32482 20.5104 4.04948 19.9142 4.87159C19.403 5.52064 19.1324 5.85665 19.1024 5.87961C18.9658 6.02955 18.8774 6.20879 18.8465 6.39875L18.8455 6.40463C18.8699 6.57579 18.9606 6.73442 19.1024 6.85404L19.4858 7.22869C21.5369 9.07619 22.6906 10.3497 22.9468 11.0491C22.9954 11.164 23.011 11.2876 22.9923 11.4091C22.9736 11.5305 22.9211 11.646 22.8395 11.7455L22.8414 11.743C22.7449 11.8302 22.6273 11.8973 22.4972 11.9393C22.3671 11.9814 22.228 11.9972 22.0899 11.9857H22.0938H19.5672C19.2442 11.9857 18.9471 11.8866 18.7142 11.722L18.7171 11.7237C18.3845 11.4847 18.0793 11.218 17.8056 10.9273L17.7969 10.9172C17.3554 10.4799 16.9637 10.1117 16.6219 9.81261C15.4832 8.86394 14.6429 8.38961 14.1011 8.38961C13.9262 8.37587 13.7513 8.41597 13.6065 8.50301L13.6094 8.50133C13.5472 8.5697 13.5015 8.64845 13.4751 8.73279C13.4488 8.81713 13.4423 8.90529 13.456 8.9919V8.98854C13.4188 9.38049 13.4066 9.77396 13.4196 10.1671V10.1528V11.1264C13.4468 11.2427 13.4375 11.3633 13.3926 11.4753C13.3477 11.5873 13.2689 11.6865 13.1646 11.7623L13.1637 11.7631C12.6783 11.9553 12.1439 12.0327 11.6138 11.9874L11.6263 11.9883C10.1753 11.9665 8.75867 11.5982 7.52881 10.9231L7.56236 10.9399C6.14419 10.1906 4.92863 9.18029 3.99971 7.97884L3.97383 7.94355C3.07214 6.88973 2.27953 5.76748 1.60544 4.59018L1.53835 4.46082C1.08917 3.69844 0.694478 2.91235 0.356552 2.10707L0.299044 1.95166C0.142367 1.53362 0.0426328 1.1008 0.00191695 0.662228L0 0.641227C0 0.216735 0.284986 0.00448905 0.854959 0.00448905H3.37575C3.63059 -0.0130042 3.88357 0.0545013 4.08406 0.193494L4.08214 0.191814C4.27384 0.37578 4.41569 0.601746 4.48566 0.853753L4.48853 0.863833C4.90498 1.90909 5.41355 2.92438 6.00963 3.90052L5.94541 3.78544C6.37624 4.5524 6.89762 5.27766 7.50102 5.94934L7.47897 5.9233C7.99016 6.47323 8.38888 6.7482 8.67515 6.7482L8.70582 6.74904C8.77321 6.74913 8.83944 6.73364 8.89783 6.70415C8.95622 6.67465 9.00471 6.63219 9.03841 6.58103L9.03937 6.57935C9.13113 6.36881 9.1675 6.14283 9.14576 5.91826V5.9233V2.66484C9.12784 2.2954 9.02344 1.93313 8.83905 1.60053L8.84671 1.61649C8.73491 1.40512 8.58971 1.20859 8.4154 1.03268L8.41828 1.03604C8.25755 0.895408 8.153 0.713019 8.12019 0.516063L8.11923 0.511023C8.11923 0.368219 8.19399 0.239696 8.31093 0.155693L8.31188 0.154853C8.43222 0.0582662 8.58961 0.00488947 8.75278 0.00532901H12.7343C12.8342 -0.00489361 12.9355 0.00679395 13.029 0.0393429C13.1225 0.0718919 13.2054 0.124284 13.2701 0.191814L13.271 0.192654C13.3921 0.388695 13.4451 0.611491 13.4234 0.833592V0.829392V5.17484C13.4082 5.34623 13.4537 5.51756 13.5538 5.66541L13.5519 5.66205C13.587 5.70802 13.6344 5.74572 13.6901 5.7718C13.7458 5.79787 13.8079 5.81154 13.871 5.81157C14.0327 5.80237 14.1895 5.75538 14.3234 5.67549L14.3206 5.67717C14.5813 5.52009 14.8055 5.34116 15.0001 5.13871L15.0039 5.13451C15.5961 4.54732 16.127 3.91477 16.5902 3.24446L16.6276 3.18566C16.9573 2.70685 17.3139 2.11715 17.6369 1.51149L17.6963 1.38801L18.1238 0.638707C18.1991 0.444968 18.3442 0.277967 18.5374 0.162942C18.7305 0.0479161 18.9612 -0.00888268 19.1944 0.0011288H19.1915H21.7133C22.3944 0.0011288 22.65 0.275817 22.48 0.825192H22.4791Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="socials-item">
+                                        <a class="socials-link" href="#">
+                                            <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M18.4487 1.45624L15.7323 15.0342C15.5272 15.9923 14.993 16.2308 14.2337 15.7797L10.0945 12.5469L8.0976 14.5831C7.87644 14.8175 7.69192 15.0131 7.26566 15.0131L7.56333 10.5455L15.2341 3.19872C15.5678 2.88389 15.1614 2.70875 14.7159 3.02426L5.23273 9.35361L1.15015 7.99888C0.26227 7.70517 0.246197 7.05779 1.33531 6.60598L17.3036 0.0851558C18.043 -0.208551 18.6898 0.259608 18.4487 1.45692V1.45624Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mob-menu-decor JS-MobileMenu-Close"></div>
+                    </div>
+                    -->
+                    <a href="/" class="header-logo">
+                        <img class="header-logo-img" src="./images/company-logo.svg" alt="" />
+                    </a>
+                    <a class="header-location-mob js-popup-city" href="javascript:;" data-src="./ajax/city.html">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" fill="white"/>
+                            <path d="M12.0009 13.4299C13.724 13.4299 15.1209 12.0331 15.1209 10.3099C15.1209 8.58681 13.724 7.18994 12.0009 7.18994C10.2777 7.18994 8.88086 8.58681 8.88086 10.3099C8.88086 12.0331 10.2777 13.4299 12.0009 13.4299Z" fill="white"/>
+                            <path d="M3.61971 8.49C5.58971 -0.169998 18.4197 -0.159997 20.3797 8.5C21.5297 13.58 18.3697 17.88 15.5997 20.54C11.9996 23.9971 12.7996 24.7901 8.38971 20.54C5.62971 17.88 2.46971 13.57 3.61971 8.49Z" fill="#C22B6B"/>
+                            <circle cx="12" cy="10" r="3" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="menu-catalog js-main-menu-switcher JS-Dropdown" data-mainmenu-class="menu-catalog_active" data-dropdown="{
+                        'classActive': 'menu-catalog_active',
+                        'classShow': 'catalog-menu-show'
+                    }">
+                        <a class="menu-catalog-switcher JS-Dropdown-Switcher" href="javascript:;">
+                            <svg class="menu-catalog-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.91675 5.75H16.4167" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M2.91675 9.5H16.4167" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M2.91675 13.25H16.4167" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <span class="menu-catalog-label">Каталог</span>
+                        </a>
+                        <div class="menu-catalog-container container JS-Dropdown-Menu">
+                            <div class="menu-catalog-block js-custom-scroll">
+                            </div>
+                            <div class="menu-catalog-decor-left JS-Dropdown-Close"></div>
+                            <div class="menu-catalog-decor-right JS-Dropdown-Close"></div>
+                        </div>
+                    </div>
+                    <div class="header-main-phone">
+                        <div class="header-phone">
+                            <a href="tel:+78007077258">8 800 707 72 58</a>
+                        </div>
+                    </div>
+                    <div class="header-search">
+                        <div class="search JS-Dropdown" data-dropdown="{
+                            'classActive': 'search_active',
+                            'classShow': 'search-show'
+                        }">
+                            <form class="search-form">
+                                <div class="search-container">
+                                    <input class="search-input" type="text" placeholder="Поиск..." />
+                                    <button class="search-button" type="submit">
+                                        <svg class="search-icon" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.95801 16.25C12.893 16.25 16.083 13.06 16.083 9.125C16.083 5.18997 12.893 2 8.95801 2C5.02298 2 1.83301 5.18997 1.83301 9.125C1.83301 13.06 5.02298 16.25 8.95801 16.25Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M16.833 17L15.333 15.5" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <!-- Показывается list-popup, если есть результаты поиска-->
+                                <!--
+                                <div class="search-list-popup">
+                                    <div class="search-list-popup-block js-custom-scroll">
+                                        <ul class="search-list-popup-menu">
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                            <li class="search-list-popup-item">
+                                                <a class="search-list-popup-link" href="#">
+                                                    <span class="search-list-popup-name">Название</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                -->
+                                <!-- /Показывается list-popup, если есть результаты поиска -->
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header-user-links">
+                        <ul class="user-links">
+                            <li class="user-links-item">
+                                <a class="user-links-element js-popup-wishlist" href="javascript:;" data-src="./ajax/wishlist.html">
+                                    <span class="user-links-icon">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.7865 20.8101C12.4465 20.9301 11.8865 20.9301 11.5465 20.8101C8.6465 19.8201 2.1665 15.6901 2.1665 8.6901C2.1665 5.6001 4.6565 3.1001 7.7265 3.1001C9.5465 3.1001 11.1565 3.9801 12.1665 5.3401C13.1765 3.9801 14.7965 3.1001 16.6065 3.1001C19.6765 3.1001 22.1665 5.6001 22.1665 8.6901C22.1665 15.6901 15.6865 19.8201 12.7865 20.8101Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        <span class="user-links-informer">12</span>
+                                    </span>
+                                    <span class="user-links-label">Избранное</span>
+                                </a>
+                            </li>
+                            <li class="user-links-item">
+                                <a class="user-links-element js-open-profile" href="javascript:;" data-src="./ajax/profile.html">
+                                    <span class="user-links-icon">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.333 4.1L14.333 19.9C14.333 21.4 14.973 22 16.563 22H20.603C22.193 22 22.833 21.4 22.833 19.9V4.1C22.833 2.6 22.193 2 20.603 2H16.563C14.973 2 14.333 2.6 14.333 4.1Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M2.83301 11.1L2.83301 19.9C2.83301 21.4 3.47301 22 5.06301 22H9.10301C10.693 22 11.333 21.4 11.333 19.9V11.1C11.333 9.6 10.693 9 9.10301 9H5.06301C3.47301 9 2.83301 9.6 2.83301 11.1Z" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
+                                    <span class="user-links-label">Сравнение</span>
+                                </a>
+                            </li>
+                            <li class="user-links-item">
+                                <a class="user-links-element js-popup-basket" href="javascript:;" data-src="./ajax/basket.html">
+                                    <span class="user-links-icon">
+                                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.30994 2L5.68994 5.63" stroke="#2A2A2A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15.6899 2L19.3099 5.63" stroke="#2A2A2A" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2.5 7.8501C2.5 6.0001 3.49 5.8501 4.72 5.8501H20.28C21.51 5.8501 22.5 6.0001 22.5 7.8501C22.5 10.0001 21.51 9.8501 20.28 9.8501H4.72C3.49 9.8501 2.5 10.0001 2.5 7.8501Z" stroke="#2A2A2A" stroke-width="1.5"/>
+                                        <path d="M10.2598 14V17.55" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M14.8599 14V17.55" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M4 10L5.41 18.64C5.73 20.58 6.5 22 9.36 22H15.39C18.5 22 18.96 20.64 19.32 18.76L21 10" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                        <!--<span class="user-links-informer">2</span>-->
+                                    </span>
+                                    <span class="user-links-label">Корзина</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-main-menu">
+                <div class="header-main-menu-container container">
+                    <div class="main-menu-wrapper">
+                        <!-- Если есть подменю, то добавитьь класс js-main-menu-item -->
+                        <ul class="main-menu-list js-adaptivemenu" data-adaptivemenu-active="main-menu_active">
+                            <li class="main-menu-item js-adaptivemenu-item js-main-menu-item">
+                                <a class="main-menu-link" href="#">Главная</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item js-main-menu-item">
+                                <a class="main-menu-link" href="#">Акции</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item js-main-menu-item">
+                                <a class="main-menu-link" href="#">
+                                    Услуги<svg class="main-menu-icon" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.5L3 2.5L5 0.5" stroke="#383838" stroke-linecap="round"/>
+                                    </svg>
+                                </a>
+                                <div class="main-submenu">
+                                    <ul class="main-submenu-list">
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 1</a>
+                                        </li>
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item js-main-menu-item">
+                                <a class="main-menu-link" href="#">
+                                    Компания<svg class="main-menu-icon" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.5L3 2.5L5 0.5" stroke="#383838" stroke-linecap="round"/>
+                                </svg>
+                                </a>
+                                <div class="main-submenu">
+                                    <ul class="main-submenu-list">
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 1</a>
+                                        </li>
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Бренды</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Статьи</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item js-main-menu-item">
+                                <a class="main-menu-link" href="#">
+                                    Оплата и доставка<svg class="main-menu-icon" width="6" height="4" viewBox="0 0 6 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.5L3 2.5L5 0.5" stroke="#383838" stroke-linecap="round"/>
+                                </svg>
+                                </a>
+                                <div class="main-submenu">
+                                    <ul class="main-submenu-list">
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 1</a>
+                                        </li>
+                                        <li class="main-submenu-item">
+                                            <a class="main-submenu-link" href="#">Название 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Гарантия</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Контакты</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Акции</a>
+                            </li>
+                            <li class="main-menu-item js-adaptivemenu-item">
+                                <a class="main-menu-link" href="#">Гарантия</a>
+                            </li>
+                            <li class="main-menu-item main-menu-item_more js-adaptivemenu-more">
+                                <a class="main-menu-link" href="javascript:;">
+                                    <svg class="main-menu-more-icon" width="20" height="4" viewBox="0 0 20 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="2" cy="2" r="2" fill="#1B1B1B"/>
+                                        <circle cx="10" cy="2" r="2" fill="#1B1B1B"/>
+                                        <circle cx="18" cy="2" r="2" fill="#1B1B1B"/>
+                                    </svg>
+                                </a>
+                                <div class="main-menu-target main-submenu main-submenu_target">
+                                    <ul class="main-submenu-list js-adaptivemenu-target"></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!--
+            <section class="main-banner container">
+                <div class="main-banner-block js-slider-main-banner">
+                    <div class="main-banner-inner js-slider-list">
+                        <div class="main-banner-list swiper-wrapper">
+                            <div class="main-banner-item swiper-slide">
+                                <div class="main-banner-detail">
+                                    <div class="main-banner-preface">Компания Авионика</div>
+                                    <div class="main-banner-name">Встречаем весну<br /> в&nbsp;новой обуви Berkemenn</div>
+                                    <div class="main-banner-info content">В магазинах и онлайн для комфортности ваших ног, консультация врача-ортопеда в подарок!</div>
+                                    <div class="main-banner-actions">
+                                        <a class="main-banner-button button button_light" href="#">Смотреть</a>
+                                    </div>
+                                </div>
+                                <div class="main-banner-img">
+                                    <img class="main-banner-pic" src="./images/main-banner/main-banner-img-1.jpg" loading="lazy" alt="" />
+                                </div>
+                            </div>
+                            <div class="main-banner-item main-banner-item_even swiper-slide">
+                                <div class="main-banner-detail">
+                                    <div class="main-banner-preface">Компания Авионика</div>
+                                    <div class="main-banner-name">Встречаем весну<br /> в&nbsp;новой обуви Berkemenn</div>
+                                    <div class="main-banner-actions">
+                                        <a class="main-banner-button button button_light" href="#">Смотреть</a>
+                                    </div>
+                                </div>
+                                <div class="main-banner-img">
+                                    <img class="main-banner-pic" src="./images/main-banner/main-banner-img-1.jpg" loading="lazy" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination js-slider-pagination"></div>
+                </div>
+            </section>
+
+            <section class="advantages container">
+                <ul class="advantages-list">
+                    <li class="advantages-list-item">
+                        <div class="advantages-block">
+                            <div class="advantages-icon">
+                                <img class="advantages-img" src="./images/advatages/location-icon.svg" alt="" />
+                            </div>
+                            <div class="advantages-info"><b>Удобно получить</b> на Почте России и в СДЭК</div>
+                        </div>
+                    </li>
+                    <li class="advantages-list-item">
+                        <div class="advantages-block">
+                            <div class="advantages-icon">
+                                <img class="advantages-img" src="./images/advatages/plus-icon.svg" alt="" />
+                            </div>
+                            <div class="advantages-info">Салоны с приемом <b>врача ортопеда</b></div>
+                        </div>
+                    </li>
+                    <li class="advantages-list-item">
+                        <div class="advantages-block">
+                            <div class="advantages-icon">
+                                <img class="advantages-img" src="./images/advatages/heart-icon.svg" alt="" />
+                            </div>
+                            <div class="advantages-info"><b>Войти по номеру</b> телефона или Email</div>
+                        </div>
+                    </li>
+                    <li class="advantages-list-item">
+                        <div class="advantages-block">
+                            <div class="advantages-icon">
+                                <img class="advantages-img" src="./images/advatages/discaunt-icon.svg" alt="" />
+                            </div>
+                            <div class="advantages-info"><b>Бесплатная доставка</b> по России</div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+-->
+
+        </main>
+
+        <footer class="footer">
+        </footer>
+
+        <div class="decor-popup"></div>
+
+        <div class="preloader g-hidden js-preloader">
+            <div class="preloader-container"></div>
+        </div>
+
+        <div class="form-popup-container js-form-popup"></div>
+
+    </div>
+
+    <script>
+        var GLOBAL = GLOBAL || {};
+        GLOBAL.FORMERROR = GLOBAL.FORMERROR || {};
+        GLOBAL.FORMERROR.REQUIRED = 'Поле обязательно для заполнения';
+    </script>
+
+    <script src="./libs/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./libs/validate/jquery.validate.min.js"></script>
+    <script src="./libs/inputmask/jquery.inputmask.min.js"></script>
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./libs/Selectric/public/jquery.selectric.min.js"></script>
+    <script src="./libs/simplebar/simplebar.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./libs/wow/wow.min.js"></script>
+    <script src="./libs/jcfilter/jcfilter.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/map-shops.js"></script>
+    <script src="./js/JSC.Dropdown.js"></script>
+    <script src="./js/JSC.MobileMenu.js"></script>
+    <script src="./js/JSC.Accordion.js"></script>
+    <script src="./js/JSC.ShowMore.js"></script>
+    <script src="./js/JSC.Quantity.js"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
