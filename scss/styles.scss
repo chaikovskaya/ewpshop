@@ -1,8 +1,8 @@
 
 $mobile: 770px;
 $tablet: 992px;
-$desktop: 1330px;
-$gutters: 80px;
+$desktop: 1450px;
+$gutters: 40px;
 $gutter: calc($gutters/2);
 
 :root {
@@ -14,8 +14,10 @@ $gutter: calc($gutters/2);
 	--color6: #F5F7FA;
 	--color7: #B6B6B6;
 	--color8: #383838;
+	--color9: #6F6F6F;
+	--color10: #FFFFFF;
 
-	--font-common: 'Raleway';
+	--font-common: 'Raleway', sans-serif;
 	--font-size: 15px;
 	--line-height: 24px;
 }
@@ -40,8 +42,9 @@ html, body {
 
 body {
     font: var(--font-size)/var(--line-height) var(--font-common), sans-serif;
-    color: var(--color1);
+    color: var(--color9);
 	background-color: #fff;
+	font-variant-numeric: lining-nums proportional-nums;
 }
 
 /* ya browser */

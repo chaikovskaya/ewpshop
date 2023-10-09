@@ -14,29 +14,52 @@
         margin-right: auto;
     }
     &-top-right {
-        margin-left: auto;
-    }
-    &-top-menu {
         display: flex;
         align-items: center;
+        margin-left: auto;
     }
-    &-top-menu-item {
-        padding-right: 20px;
-        margin-right: 20px;
-        border-right: 1px solid var(--color4);
+    &-contacts {
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+    }
+    &-contacts-item {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 15px;
         line-height: 11px;
         &:last-child {
             margin-right: 0;
-            border-right-width: 0;
         }
     }
-    &-top-menu-link {
-        display: inline-block;
+    &-contacts-info {
         text-decoration: none;
-        font-size: 15px;
-        &:hover {
-            text-decoration: underline;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.39px;
+        color: var(--color10);
+        a {
+            text-decoration: none;
         }
+        &:hover {
+            color: var(--color10);
+        }
+    }
+    &-contacts-icon {
+        min-width: 16px;
+        margin-right: 9px;
+    }
+    &-login {
+        display: flex;
+        margin-left: 45px;
+        text-decoration: none;
+    }
+    &-login-label {
+        text-decoration: none;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.39px;
+        color: var(--color10);
     }
     &-main {
         border-bottom: 1px solid var(--color5);
@@ -48,17 +71,28 @@
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    &-logo-wrapper {
+        padding-right: 12px;
+        margin-right: 12px;
+        border-right: 1px solid var(--color5);
+    }
     &-logo {
         display: inline-block;
-        margin-right: 12px;
+    }
+    &-name {
+        max-width: 167px;
+        padding-right: 21px;
+        margin-right: auto;
+        color: var(--color9);
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0.36px;
     }
     &-logo-img {
         display: block;
         max-width: 150px;
         max-height: 60px;
-    }
-    &-main-phone {
-        display: none;
     }
     &-top-links {
         display: flex;
@@ -78,15 +112,24 @@
     &-location-icon {
         margin-right: 9px;
     }
+    &-location-name {
+        margin-right: 5px;
+        font-size: 13px;
+        line-height: 16px;
+        color: var(--color10);
+        letter-spacing: 0.39px;
+    }
     &-location-label {
-        font-size: 16px;
-        line-height: 22px;
-        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
         color: var(--color4);
-        text-decoration: underline;
+        letter-spacing: 0.39px;
     }
     &-location:hover &-location-label {
         text-decoration: none;
+    }
+    &-location-arrow {
+        margin-left: 6px;
     }
     &-search {
         flex-grow: 1;
@@ -99,18 +142,95 @@
         position: relative;
         display: flex;
         align-items: center;
-        min-height: 78px;
-        padding-top: 18px;
-        padding-bottom: 18px;
+        min-height: 47px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     &-user-links {
         margin-left: auto;
     }
-    &-main-menu-phone {
-        margin-left: auto;
+    &-callback {
+        margin-right: 20px;
     }
-    &-location-mob {
+    &-phone {
+    }
+    &-phone-container {
+        position: relative;
+    }
+    &-phone-block {
+        display: flex;
+        align-items: center;
+    }
+    &-phone-switcher {
+        margin-top: -5px;
+        margin-left: 6px;
+    }
+    &-phone-switcher-icon {
+        transition: transform 0.2s ease-in-out 0s;
+    }
+    &-phone-dropdown {
         display: none;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        z-index: 3;
+        min-width: 243px;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
+        border-radius: 3px;
+    }
+    &-phone-icon {
+        margin-right: 9px;
+    }
+    &-phone-number {
+        font-size: 13px;
+        line-height: 15px;
+        color: var(--color6);
+        a {
+            text-decoration: none;
+            color: var(--color6);
+            &:hover {
+                color: var(--color17);
+            }
+        }
+    }
+    &-phone-list-item {
+        padding: 10px 19px;
+        &:hover {
+            background-color: var(--color6);
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-phone-list-number {
+        margin-bottom: 5px;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.39px;
+        a {
+            text-decoration: none;
+            color: var(--color8);
+            &:hover {
+                color: var(--color8);
+            }
+        }
+    }
+    &-phone_active &-phone-dropdown {
+        display: block;
+    }
+    &-phone_active &-phone-switcher-icon {
+        transform: rotate(-180deg);
+    }
+    &-phone-list-department {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14px;
+        letter-spacing: 0.36px;
+    }
+    &-phone-button {
+        margin-bottom: 28px;
     }
 
     @media screen
@@ -141,13 +261,6 @@
         &-logo-img {
             max-width: 190px;
             max-height: 40px;
-        }
-        &-main-phone {
-            display: block;
-            margin-right: 40px;
-        }
-        &-main-menu-phone {
-            display: none;
         }
         &-search {
             margin-left: auto;
@@ -182,40 +295,17 @@
             margin-top: 20px;
             max-width: none;
         }
-        &-main-phone {
-            margin-right: 0;
-            margin-top: 1px;
-            margin-left: 9px;
-        }
-        &-location-mob {
-            display: block;
-            margin-left: 9px;
-            line-height: 0;
-        }
     }
 }
 
 .menu-catalog {
     margin-right: 25px;
+    margin-left: auto;
     &-switcher {
         display: flex;
-        height: 42px;
         align-items: center;
-        padding: 12px 25px 12px 20px;
-        text-decoration: none;
-        background-color: var(--color4);
-        border-radius: 50em;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 18px;
-        letter-spacing: 0.42px;
-        color: #fff;
-        &:hover {
-            color: #FFFFFF;
-        }
-        &:active {
-            background-color: var(--color4);
-        }
+        padding-right: 25px;
+        padding-left: 20px;
     }
     &-icon {
         min-width: 19px;
@@ -490,7 +580,6 @@
     }
     &-wrapper {
         position: relative;
-        margin-right: 30px;
         flex-grow: 1;
         height: 18px;
         &:after {
@@ -550,8 +639,7 @@
         transform: rotate(-180deg);
     }
     &-more-icon {
-        margin-top: 5px;
-        margin-bottom: 5px;
+        margin-right: 3px;
     }
     &-item_more:hover &-target {
         display: block;
@@ -578,10 +666,6 @@
         letter-spacing: 0.32px;
         &:last-child {
             margin-bottom: 0;
-        }
-        &:hover {
-            color: var(--color6);
-            text-shadow: 0 0 .04em var(--color6);
         }
     }
 
@@ -643,8 +727,7 @@
         font-weight: 300;
         letter-spacing: 0.32px;
         &:hover {
-            color: var(--color6);
-            text-shadow: 0 0 .04em var(--color6);
+            color: var(--color2);
         }
     }
 
@@ -961,7 +1044,6 @@
     }
     &-list {
         margin-left: 30px;
-        margin-right: 30px;
     }
     &-list-item {}
     &-is-levels &-list-item {
@@ -1242,13 +1324,14 @@
         line-height: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 7px;
+        margin-bottom: 8px;
     }
     &-label {
         display: block;
-        font-size: 13px;
+        font-size: 12px;
         line-height: 13px;
-        color: var(--color1);
+        color: var(--color2);
+        letter-spacing: 0.36px;
     }
     &-informer {
         position: absolute;
@@ -1263,7 +1346,7 @@
         border-radius: 10px;
         font-weight: 700;
         font-size: 10px;
-        line-height: 12px;
+        line-height: 11px;
         background-color: var(--color4);
         color: #fff;
         border: 2px solid #fff;
