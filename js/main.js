@@ -486,16 +486,14 @@ function initSliderMainBanner() {
             slidesPerView: 1,
             threshold: 10,
             lazy: true,
+            spaceBetween: 0,
             breakpoints: {
                 0: {
                     simulateTouch: false,
-                    spaceBetween: 15,
                 },
                 770: {
-                    spaceBetween: 25,
                 },
                 992: {
-                    spaceBetween: 30,
                 },
             },
             on: {
