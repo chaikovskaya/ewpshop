@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Не переносить на продакшен -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Попапы. Ewpshop</title>
+
+    <link rel="stylesheet" href="./libs/fancybox/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./libs/Selectric/public/selectric.css" />
+    <link rel="stylesheet" href="./libs/simplebar/simplebar.min.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <ol style="margin:40px 60px; font-size: 20px;">
+            <li>
+                <a class="js-popup-question" href="javascript:;" data-src="./ajax/question.html">Попап Задать вопрос</a>
+            </li>
+            <li>
+                <a class="js-popup-services" href="javascript:;" data-src="./ajax/service.html">Попап Заказать услугу</a>
+            </li>
+            <li>
+                <a class="js-popup-callback" href="javascript:;" data-src="./ajax/callback.html">Попап Заказать звонок</a>
+            </li>
+            <li>
+                <a class="js-popup-success" href="javascript:;" data-src="./ajax/success.html">Попап Спасибо (успешная отправка формы)</a>
+            </li>
+        </ol>
+
+        <div class="decor-popup"></div>
+
+        <div class="preloader g-hidden js-preloader">
+            <div class="preloader-container"></div>
+        </div>
+
+        <div class="form-popup-container js-form-popup"></div>
+
+    </div>
+
+    <script>
+        var GLOBAL = GLOBAL || {};
+        GLOBAL.FORMERROR = GLOBAL.FORMERROR || {};
+        GLOBAL.FORMERROR.REQUIRED = 'Поле обязательно для заполнения';
+    </script>
+
+    <script src="./libs/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./libs/fancybox/jquery.fancybox.min.js"></script>
+    <script src="./libs/validate/jquery.validate.min.js"></script>
+    <script src="./libs/inputmask/jquery.inputmask.min.js"></script>
+    <script src="./libs/swiper/swiper-bundle.min.js"></script>
+    <script src="./libs/Selectric/public/jquery.selectric.min.js"></script>
+    <script src="./libs/simplebar/simplebar.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./libs/wow/wow.min.js"></script>
+    <script src="./libs/jcfilter/jcfilter.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/map-shops.js"></script>
+    <script src="./js/JSC.Dropdown.js"></script>
+    <script src="./js/JSC.MobileMenu.js"></script>
+    <script src="./js/JSC.Accordion.js"></script>
+    <script src="./js/JSC.ShowMore.js"></script>
+    <script src="./js/JSC.Quantity.js"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

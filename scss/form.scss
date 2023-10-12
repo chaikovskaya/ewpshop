@@ -1,30 +1,15 @@
 
 .field {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
-    &_simple {
-        margin-top: 27px;
-        margin-bottom: 23px;
-    }
-    &-button {
-        margin-bottom: 25px;
-    }
+    margin-bottom: 25px;
 
     @media screen
     and (max-width: $tablet){
-        margin-bottom: 18px;
-        &_simple {
-            margin-top: 23px;
-            margin-bottom: 23px;
-        }
     }
     @media screen
     and (max-width: $mobile){
-        &_simple {
-            margin-top: 26px;
-            margin-bottom: 13px;
-        }
     }
 }
 
@@ -32,19 +17,25 @@
     margin-top: auto;
     width: 100%;
     height: 42px;
-    padding: 6px 24px 7px;
-    color: var(--color11);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 24px;
-    border-radius: 21px;
-    background-color: #fff;
+    padding: 13px 12px 13px;
+    font-weight: 500;
+    line-height: 16px;
+    font-size: 13px;
+    letter-spacing: 0.39px;
+    color: var(--color8);
+    border-radius: 10px;
+    background-color: var(--color-input);
+    border: 1px solid var(--color5);
     &:focus {
-        color: var(--color11);
+        border-color: var(--color7);
     }
     &::placeholder {
-        font-size: 15px;
-        color: var(--color18);
+        font-size: 13px;
+        color: var(--color9);
+        font-weight: 500;
+    }
+    &:not(:placeholder-shown) {
+        border-color: var(--color7);
     }
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
@@ -52,78 +43,50 @@
         -webkit-text-fill-color: var(--color18);
         transition: background-color 1s ease-in-out 0s;
     }
-
-    &_simple {
-        border: 1px solid var(--color20);
-        &:focus {
-            border-color: var(--color6);
-        }
-    }
-
-    &_modified {
-        border: 1px solid var(--color23);
-        color: var(--color23);
-        font-weight: 500;
-        font-size: 14px;
+    &:disabled {
+        background-color: var(--color5);
+        color: var(--color7);
+        border-color: var(--color5);
         &::placeholder {
-            color: var(--color23);
-            font-weight: 500;
+            color: var(--color7);
         }
     }
-    &_dark {
-        border: 1px solid var(--color20);
+    &.form-error {
+        display: block;
+        background-color: var(--color13);
+        border-color: var(--color13);
         &:focus {
-            border-color: var(--color11);
+
+        }
+        &::placeholder {
+            color: var(--color14);
         }
     }
-
 
     &_textarea {
         display: block;
         width: 100%;
-        min-height: 40px;
-        max-height: 160px;
-        padding-top: 9px;
+        min-height: 82px;
+        max-height: 82px;
         resize: none;
         transition: height 0.3s ease-in-out 0s;
     }
 
     @media screen
     and (max-width: $tablet){
-        height: 35px;
-        padding-left: 18px;
-        padding-right: 18px;
-        font-size: 13px;
-        line-height: 16px;
-        font-weight: 500;
-        border-radius: 18px;
-        &::placeholder {
-            font-size: 13px;
-        }
-        &_textarea {
-            min-height: 35px;
-            max-height: 130px;
-        }
     }
     @media screen
     and (max-width: $mobile){
-        &_textarea {
-            padding-top: 8px;
-        }
-    }
-}
-
-input.form-error {
-    display: block;
-    &:focus {
-    }
-    &::placeholder {
     }
 }
 
 label.form-error {
-    display: block;
-    margin-bottom: 6px;
+    /*
+    position: absolute;
+    top: 14px;
+    left: 12px;
+     */
+    margin-bottom: 4px;
     color: #e11439;
     font-size: 12px;
     line-height: 14px;
@@ -505,13 +468,13 @@ and (max-width: $mobile) {
         display: inline-block;
         vertical-align: middle;
         position: relative;
-        width: 31px;
-        min-width: 31px;
-        height: 18px;
-        margin-right: 11px;
+        width: 34px;
+        min-width: 34px;
+        height: 19px;
+        margin-right: 15px;
         padding: 2px;
         border-radius: 50em;
-        background-color: #E4E8F1;
+        background-color: var(--color12);
         cursor: pointer;
     }
     &-decor_simple {
@@ -519,25 +482,27 @@ and (max-width: $mobile) {
     }
     &-icon {
         position: absolute;
-        top: 3px;
+        top: 4px;
         left: 4px;
-        width: 12px;
-        height: 12px;
+        width: 11px;
+        height: 11px;
         background-color: #fff;
         border-radius: 50%;
         transition: left 0.1s ease-in-out 0s;
     }
     &-label {
-        margin-top: -2px;
-        line-height: 21px;
-        font-size: 14px;
-        color: var(--color19);
+        margin-top: 3px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.36px;
     }
     &-label a {
-        color: inherit;
+        color: var(--color8);
+        font-weight: 500;
+        text-decoration: none;
         &:hover {
-            text-decoration: none;
-            color: inherit;
+            text-decoration: underline;
+            color: var(--color8);
         }
     }
     &-checkbox {
@@ -548,10 +513,10 @@ and (max-width: $mobile) {
         opacity: 0;
     }
     &-checkbox:checked + &-decor {
-        background-color: var(--color6);
+        background-color: var(--color4);
     }
     &-checkbox:checked + &-decor &-icon {
-        left: 15px;
+        left: 18px;
     }
 
     @media screen

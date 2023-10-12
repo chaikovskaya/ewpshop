@@ -16,8 +16,12 @@ $gutter: calc($gutters/2);
 	--color9: #6F6F6F;
 	--color10: #FFFFFF;
 	--color11: #484848;
+	--color12: #E4E8F1;
+	--color13: #FCDCDC;
+	--color14: #FA0000;
+	--color-input: #FFFFFF;
 
-	--font-common: 'Raleway', sans-serif;
+	--font-common: 'Raleway';
 	--font-size: 16px;
 	--line-height: 26px;
 }
@@ -210,6 +214,8 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 	font-family: var(--font-common), sans-serif;
+	font-variant-numeric: lining-nums proportional-nums;
+
 }
 
 fieldset {

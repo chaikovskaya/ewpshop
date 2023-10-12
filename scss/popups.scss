@@ -1,7 +1,7 @@
 
 /* Fancybox */
 .fancybox-bg {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.35);
 }
 
 .fancybox-slide {
@@ -23,25 +23,22 @@
 
 .fancybox-close {
     position: absolute;
-    top: -4px;
-    left: 100%;
+    top: 15px;
+    right: 15px;
     z-index: 1;
-    margin-left: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     border: 0;
     background: transparent;
 }
-.fancybox-close:hover {
-}
 
-.fancybox-close-icon {
+.fancybox-close:hover .fancybox-close-icon {
     path {
-        fill: var(--color1);
+        stroke: var(--color9);
     }
 }
 .fancybox-button .fancybox-button-arrow {
@@ -112,6 +109,14 @@
     display: none;
 }
 
+.fancybox-active .wrapper {
+    -webkit-filter: blur(15px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
 @media screen
 and (max-width: $tablet) {
 }
@@ -121,10 +126,8 @@ and (max-width: $mobile) {
         padding: 50px 11px;
     }
     .fancybox-close {
-        top: -32px;
-        margin-left: -24px;
-        width: 28px;
-        height: 28px;
+        top: 13px;
+        right: 13px;
     }
     .fancybox-button--arrow_right {
         right: 10px;
@@ -189,35 +192,29 @@ and (max-width: $mobile) {
 
 .popup {
     width: 100%;
-    max-width: 460px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    max-width: 490px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.10);
     &-content {
-        padding: 53px 30px 50px;
+        padding: 60px;
     }
     &-title {
         display: block;
-        margin-bottom: 19px;
-        font-weight: 700;
+        margin-bottom: 20px;
         font-size: 28px;
-        line-height: 38px;
-        text-align: center;
-        color: var(--color6);
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: 0.84px;
+        color: var(--color2);
     }
     &-info {
-        margin-bottom: 24px;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-        color: var(--color11);
-        letter-spacing: 0.14px;
-    }
-    &-add-info {
+        margin-bottom: 25px;
         font-size: 12px;
-        line-height: 18px;
-        text-align: center;
-        color: var(--color19);
+        line-height: 14px;
+        color: var(--color9);
+        letter-spacing: 0.36px;
     }
+    &-buttons {}
     &-button {
         width: 100%;
         text-transform: none;
@@ -225,6 +222,10 @@ and (max-width: $mobile) {
     }
     &-subtitle {
         text-align: center;
+        margin-bottom: 25px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.36px;
     }
 
     &-city {
@@ -240,15 +241,31 @@ and (max-width: $mobile) {
         font-weight: 600;
     }
 
+    &_success {
+        max-width: 360px;
+    }
+    &_success &-title {
+        text-align: center;
+    }
+    &_success &-buttons {
+        text-align: center;
+    }
+
+    @media screen
+    and (min-width: $desktop) {
+        &_success &-content {
+            padding-bottom: 50px;
+        }
+    }
     @media screen
     and (max-width: $tablet) {
         &-content {
-            padding: 28px 22px 40px;
+            padding: 37px 22px 30px;
         }
         &-title {
             margin-bottom: 10px;
             font-size: 26px;
-            line-height: 36px;
+            line-height: 30px;
         }
         &-info {
             margin-bottom: 24px;
@@ -268,6 +285,7 @@ and (max-width: $mobile) {
         }
     }
 }
+
 
 .city {
     &-block {
@@ -841,6 +859,7 @@ body.mob-form-show .wrapper {
     }
 }
 
+/*
 .wishlist-list-popup {
     .products-popup {
         &-form-block {
@@ -886,3 +905,5 @@ body.mob-form-show .wrapper {
         }
     }
 }
+
+ */
