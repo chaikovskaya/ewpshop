@@ -176,6 +176,7 @@ function initPopupQuestion() {
                 initValidate(data.$refs.container.find('.js-form-validate'));
                 initForm();
                 initMask();
+                initFieldText();
             },
         });
     });
@@ -761,6 +762,18 @@ function initPopupCity() {
     });
 }
 
+function initFieldText() {
+    if (typeof(FieldText) === 'undefined' || !jQuery.isFunction(FieldText)) {
+        return false;
+    }
+
+    var common = {};
+
+    jQuery('.JS-FieldText').not('.JS-FieldText-ready').each(function() {
+        var local = GLOBAL.parseData(jQuery(this).data('fieldtext'));
+        new FieldText(this, jQuery.extend({}, common, local));
+    });
+}
 
 function initResizeWindow() {
     var width = $(window).outerWidth();

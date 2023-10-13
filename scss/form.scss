@@ -59,7 +59,7 @@
 
         }
         &::placeholder {
-            color: var(--color14);
+            color: transparent;
         }
     }
 
@@ -81,11 +81,9 @@
 }
 
 label.form-error {
-    /*
     position: absolute;
     top: 14px;
     left: 12px;
-     */
     margin-bottom: 4px;
     color: #e11439;
     font-size: 12px;
@@ -96,6 +94,12 @@ label.form-error {
     and (max-width: $tablet){
         margin-bottom: 5px;
     }
+}
+.field-input_active label.form-error {
+    display: none;
+}
+.input:focus + .form-error {
+    display: none!important;
 }
 
 .checkbox {
